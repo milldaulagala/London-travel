@@ -1,0 +1,15 @@
+.status-card {
+    flex-basis: 25%;
+    padding: 20px;
+    margin-bottom: 20px;
+    background-color: #eee;
+    transform-style: preserve-3d;
+    border-radius: 10px;
+    transition: 0.6s;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    cursor: pointer;
+  }
+  
+  .status-card-reason {
+    font-size: 14px;
+  }
