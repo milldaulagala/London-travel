@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import axios from 'axios';
 import RoadCard from './RoadCard';
-import Map from './Map';
+//import Map from './Map';
 import GoBack from '../GoBack';
 import Loader from '../Loader';
 import './Roads.css';
@@ -16,13 +16,13 @@ class Roads extends Component {
   componentDidMount() {
     axios.get(`https://api.tfl.gov.uk/Road/all/Disruption?stripContent=true&severities=Works&closures=true&app_id=3b245fef&app_key=cfae3457ce0dbf8317d10a5d7857a056`)
       .then((response) => {
-        this.setState({
-          markers: response.data.map(item => {
-            return {
-              position: JSON.parse(item.point)
-            }
-          })
-        });
+        //this.setState({
+        //  markers: response.data.map(item => {
+        //    return {
+        //      position: JSON.parse(item.point)
+        //    }
+        //  })
+        //});
         this.setState({ roadsStatus: response.data });
         this.setState({ loading: false });
       });
@@ -53,11 +53,7 @@ class Roads extends Component {
               }
               )}
             </ul>
-            <div className="map">
-              <Map
-                markers={this.state.markers}
-              />
-            </div>
+            
           </div>
         </div>
       )
