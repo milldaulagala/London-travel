@@ -1,8 +1,7 @@
 pipeline {
     agent {
         docker {
-            image 'node:carbon'
-            args '-u 0:0'
+            image 'node:16.17.1-alpine'
         }
     }
     stages {
